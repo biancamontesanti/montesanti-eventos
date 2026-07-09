@@ -31,6 +31,11 @@ yarn-error.log*
 
 # env files (can opt-in for commiting if needed)
 .env*
+!.env.example
+
+# large local media should be hosted externally for deploy
+/public/videos/*
+!/public/videos/.gitkeep
 
 # vercel
 .vercel
