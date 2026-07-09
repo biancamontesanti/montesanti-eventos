@@ -78,7 +78,7 @@ export default function Home() {
         />
       </Head>
 
-      <div className="relative min-h-screen overflow-hidden">
+      <div className="relative min-h-screen overflow-hidden bg-black">
         {/* Gradient background */}
         {/* <div 
   className="fixed top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))]
@@ -89,10 +89,9 @@ export default function Home() {
   }}
 /> */}
         <div 
-          className="fixed top-0 left-0 w-full h-full"
+          className="fixed inset-0 z-0"
           style={{
             background: 'linear-gradient(to bottom right, rgba(40, 18, 26, 0.92), rgba(0, 0, 0, 1) 48%, rgba(35, 32, 22, 0.96))',
-            zIndex: -1,
           }}
         />
         {/* <div 

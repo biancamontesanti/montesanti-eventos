@@ -8,8 +8,7 @@ html {
 }
 
 html,
-body,
-#__next {
+body {
   min-height: 100%;
   background-color: #000;
 }
