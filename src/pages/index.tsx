@@ -9,6 +9,9 @@ import About from '@/components/sections/About'
 import Footer from '@/components/sections/Footer'
 
 export default function Home() {
+  const siteUrl = 'https://montesantieventos.fun';
+  const previewImage = `${siteUrl}/images/event6.JPG`;
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'EventPlanningService',
@@ -21,7 +24,7 @@ export default function Home() {
     },
     email: 'montesanti.eventos@gmail.com',
     telephone: '+55 11 98802-9023',
-    url: 'https://montesantieventos.com.br',
+    url: siteUrl,
     sameAs: ['https://instagram.com/montesantieventos'],
     serviceType: [
       'Festa de 15 anos',
@@ -51,19 +54,21 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Montesanti Eventos" />
+        <meta property="og:url" content={siteUrl} />
         <meta property="og:title" content="Montesanti Eventos | Festa de 15 anos e eventos em São Paulo" />
         <meta
           property="og:description"
           content="Planejamento, produção e coordenação para festas de 15 anos, debutantes, aniversários, casamentos e eventos sociais em São Paulo."
         />
-        <meta property="og:image" content="/images/event6.JPG" />
+        <meta property="og:image" content={previewImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Montesanti Eventos | Festa de 15 anos em São Paulo" />
         <meta
           name="twitter:description"
           content="Eventos sociais com planejamento, fornecedores selecionados e coordenação completa para o grande dia."
         />
-        <meta name="twitter:image" content="/images/event6.JPG" />
+        <meta name="twitter:image" content={previewImage} />
+        <link rel="canonical" href={siteUrl} />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
