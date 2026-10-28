@@ -14,25 +14,27 @@ export default function Home() {
 
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'EventPlanningService',
-    name: 'Montesanti Eventos',
-    description:
-      'Planejamento, produção e coordenação de festas de 15 anos, aniversários, casamentos e eventos sociais em São Paulo.',
-    areaServed: {
-      '@type': 'City',
-      name: 'São Paulo',
-    },
-    email: 'montesanti.eventos@gmail.com',
-    telephone: '+55 11 98802-9023',
-    url: siteUrl,
-    sameAs: ['https://instagram.com/montesantieventos'],
-    serviceType: [
-      'Festa de 15 anos',
-      'Debutante',
-      'Aniversários',
-      'Casamentos',
-      'Eventos sociais',
-      'Coordenação de eventos',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: 'Montesanti Eventos',
+        description: 'Planejamento, produção e coordenação de festas de 15 anos e eventos sociais em São Paulo.',
+        url: siteUrl,
+        email: 'montesanti.eventos@gmail.com',
+        telephone: '+55 11 98802-9023',
+        areaServed: { '@type': 'City', name: 'São Paulo' },
+        sameAs: ['https://instagram.com/montesantieventos'],
+      },
+      {
+        '@type': 'Service',
+        '@id': `${siteUrl}/#service`,
+        name: 'Organização de festas de 15 anos e eventos sociais',
+        serviceType: 'Planejamento e coordenação de eventos',
+        areaServed: { '@type': 'City', name: 'São Paulo' },
+        provider: { '@id': `${siteUrl}/#organization` },
+        url: siteUrl,
+      },
     ],
   };
 
@@ -44,11 +46,8 @@ export default function Home() {
           name="description"
           content="Montesanti Eventos realiza planejamento, produção e coordenação de festas de 15 anos, debutantes, aniversários, casamentos e eventos sociais em São Paulo."
         />
-        <meta
-          name="keywords"
-          content="festa de 15 anos, festa debutante, debutante São Paulo, organização de festa de 15 anos, assessoria de eventos, coordenação de eventos, Montesanti Eventos, eventos sociais São Paulo, aniversário de 15 anos"
-        />
         <meta name="author" content="Montesanti Eventos" />
+        <meta name="google-site-verification" content="tO7r_NJ3z1ED8rA2Lw5NoaLtgqlX_vocbVrCmFJhSm4" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
@@ -71,7 +70,6 @@ export default function Home() {
         />
         <meta name="twitter:image" content={previewImage} />
         <link rel="canonical" href={siteUrl} />
-        <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

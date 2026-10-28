@@ -38,7 +38,7 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-3xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
+          <h2 className="text-3xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
             <motion.span 
               className="block mb-2 md:mb-0"
               initial={{ opacity: 0, x: -20 }}
@@ -55,7 +55,11 @@ export default function Services() {
             >
               e nós cuidamos de todos.
             </motion.span>
-          </h1>
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
+            Planejamos festas de 15 anos, aniversários, casamentos e celebrações sociais em São Paulo,
+            do primeiro encontro à coordenação do grande dia.
+          </p>
         </motion.div>
 
         <div className="mb-10 space-y-2 md:mb-16">
