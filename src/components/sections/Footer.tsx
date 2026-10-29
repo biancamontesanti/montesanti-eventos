@@ -147,6 +147,9 @@ const Footer = () => {
             <p className="text-sm text-white/60">
               © 2026 Montesanti Eventos. Todos os direitos reservados.
             </p>
+            <p className="text-xs text-white/45 md:text-right">
+              Montesanti Eventos é operada por ARIA TECHNOLOGY GROUP SERVICOS ADMINISTRATIVOS E TECNOLOGIA LTDA · CNPJ 64.511.271/0001-94
+            </p>
           </div>
         </div>
       </div>
